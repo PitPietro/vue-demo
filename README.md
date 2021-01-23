@@ -1,4 +1,4 @@
-# vue-demo
+# Vue Demo
 
 ## Project setup
 ```
@@ -22,3 +22,11 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Installed packages
+
+```bash
+vue add vuetify
+# stop the running server, install vuetify and run in again
+npm install --save
+```
