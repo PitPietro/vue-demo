@@ -30,3 +30,6 @@ vue add vuetify
 # stop the running server, install vuetify and run in again
 npm install --save
 ```
+
+### Useful links
+- [Vuetify - Paddings and Margins](https://thewebdev.info/2020/08/08/vuetify%E2%80%8A-%E2%80%8Apaddings-and-margins/)
