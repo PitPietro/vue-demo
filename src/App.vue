@@ -41,6 +41,8 @@
       <HelloWorld/>
       <hr />
       <Badges />
+      <hr />
+      <TimeLines />
     </v-main>
   </v-app>
 </template>
@@ -48,11 +50,13 @@
 <script>
 import HelloWorld from './components/HelloWorld';
 import Badges from "./components/Badges";
+import TimeLines from "@/components/TimeLines";
 
 export default {
   name: 'App',
 
   components: {
+    TimeLines,
     HelloWorld,
     Badges
   },
