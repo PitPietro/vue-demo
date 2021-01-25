@@ -39,18 +39,22 @@
 
     <v-main>
       <HelloWorld/>
+      <hr />
+      <Badges />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import Badges from "./components/Badges";
 
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
+    Badges
   },
 
   data: () => ({
