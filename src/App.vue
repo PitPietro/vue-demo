@@ -40,9 +40,12 @@
     <v-main>
       <HelloWorld/>
       <hr />
+      <Carousels />
+      <hr />
       <Badges />
       <hr />
       <TimeLines />
+      <hr />
     </v-main>
   </v-app>
 </template>
@@ -51,11 +54,13 @@
 import HelloWorld from './components/HelloWorld';
 import Badges from "./components/Badges";
 import TimeLines from "@/components/TimeLines";
+import Carousels from "@/components/Carousels";
 
 export default {
   name: 'App',
 
   components: {
+    Carousels,
     TimeLines,
     HelloWorld,
     Badges
