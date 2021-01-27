@@ -46,6 +46,7 @@
       <hr />
       <TimeLines />
       <hr />
+      <Lazy />
     </v-main>
   </v-app>
 </template>
@@ -55,6 +56,7 @@ import HelloWorld from './components/HelloWorld';
 import Badges from "./components/Badges";
 import TimeLines from "@/components/TimeLines";
 import Carousels from "@/components/Carousels";
+import Lazy from "@/components/Lazy";
 
 export default {
   name: 'App',
@@ -63,7 +65,8 @@ export default {
     Carousels,
     TimeLines,
     HelloWorld,
-    Badges
+    Badges,
+    Lazy
   },
 
   data: () => ({
