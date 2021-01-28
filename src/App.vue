@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from './components/Alerts';
 import Badges from "./components/Badges";
 import TimeLines from "@/components/TimeLines";
 import Carousels from "@/components/Carousels";
