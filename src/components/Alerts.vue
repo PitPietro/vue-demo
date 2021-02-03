@@ -150,6 +150,7 @@
 export default {
   name: 'HelloWorld',
 
+  // arrow function or 'return {...}' inside 'data'
   data: () => ({
     alertType: ['Success', 'Info', 'Warning', 'Error'],
   }),
