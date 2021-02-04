@@ -29,6 +29,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 vue add vuetify
 # stop the running server, install vuetify and run in again
 npm install --save
+
+vue add router
 ```
 
 ### Useful links

@@ -1,28 +1,14 @@
 <template>
-  <v-container>
+  <v-app class="alerts">
+    <h1 class="headline font-weight-bold mb-3">
+      Alerts
+    </h1>
     <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-            :src="require('../assets/logo.svg')"
-            class="my-3"
-            contain
-            height="200"
-        />
-      </v-col>
-
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Vue Demo
-        </h1>
-      </v-col>
-
       <v-col
-          class="mb-5 px-4"
+          class=" px-4"
           cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          Alerts
-        </h2>
+
 
         <v-row justify="center">
           <v-alert
@@ -143,12 +129,12 @@
         </v-row>
       </v-col>
     </v-row>
-  </v-container>
+  </v-app>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Alerts',
 
   // arrow function or 'return {...}' inside 'data'
   data: () => ({
@@ -158,3 +144,10 @@ export default {
 
 // https://vuetifyjs.com/en/components/alerts/#usage
 </script>
+
+<style scoped>
+.alerts {
+  padding-top: 5%;
+  background-color: #31475e; /* dark green - VueJS logo */
+}
+</style>

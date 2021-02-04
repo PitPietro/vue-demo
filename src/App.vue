@@ -1,123 +1,87 @@
 <template>
-  <v-app>
-    <v-app-bar
-        app
-        color="primary"
-        dark
+  <div id="app">
+    <v-card
+        class="mx-auto overflow-hidden"
+        height="auto"
     >
-      <div class="d-flex align-center">
-        <v-img
-            alt="Vuetify Logo"
-            class="shrink mr-2"
-            contain
-            src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-            transition="scale-transition"
-            width="40"
-        />
-
-        <v-img
-            alt="Vuetify Name"
-            class="shrink mt-1 hidden-sm-and-down"
-            contain
-            min-width="100"
-            src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-            width="100"
-        />
-
-        <!--
-        <v-btn
-            class="shrink mt-1 hidden-sm-and-down"
-            to="/carousel"
-        >Carousel</v-btn>
-        -->
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
-          target="_blank"
-          text
+      <v-app-bar
+          color="deep-purple"
+          dark
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-    <v-main>
-      <ComputedExample />
-      <hr />
-      <WatchersTyping />
-      <hr />
-      <h1 class="my-title"> {{ appTitle }} </h1>
-      <WelcomeMessage @emitTitle="handleTitle" />
-      <hr />
-      <PostComponent />
-      <hr />
-      <HelloWorld/>
-      <hr />
-      <Carousels />
-      <hr />
-      <ColorPickers />
-      <hr />
-      <Badges />
-      <hr />
-      <TimeLines />
-      <hr />
-      <Lazy />
-      <hr />
-    </v-main>
-  </v-app>
+        <v-toolbar-title>Title</v-toolbar-title>
+      </v-app-bar>
+
+      <v-navigation-drawer
+          v-model="drawer"
+          absolute
+          temporary
+      >
+        <v-list
+            nav
+            dense
+        >
+          <v-list-item-group
+              v-model="group"
+              active-class="deep-purple--text text--accent-4"
+          >
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title><router-link to="/alerts">Alerts</router-link></v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title><router-link to="/about">About</router-link></v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+      <router-view/>
+    </v-card>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/Alerts';
-import Badges from "./components/Badges";
-import TimeLines from "@/components/TimeLines";
-import Carousels from "@/components/Carousels";
-import Lazy from "@/components/Lazy";
-import ColorPickers from "@/components/ColorPickers";
-import PostComponent from "@/components/PostComponent";
-import WelcomeMessage from "@/components/WelcomeMessage";
-import WatchersTyping from "@/components/WatchersTyping";
-import ComputedExample from "@/components/ComputedExample";
-
 export default {
-  name: 'App',
-
-  components: {
-    ComputedExample,
-    WatchersTyping,
-    WelcomeMessage,
-    PostComponent,
-    ColorPickers,
-    Carousels,
-    TimeLines,
-    HelloWorld,
-    Badges,
-    Lazy
-  },
-
+  name: 'app',
   data: () => ({
-    appTitle: "",
-  }),
-
-  // the father communicate with the child
-  methods: {
-    handleTitle(title) {
-      this.appTitle = title;
-      console.log('The title is ', this.appTitle);
-    }
-  }
-};
+      drawer: false,
+      group: null,
+    }),
+}
 </script>
 
-<style scoped>
-.my-title {
-  margin-top: 8px;
-  padding: 20px;
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
-  color: white;
-  background-color: #81C784 !important;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: black;
+    }
+  }
 }
 </style>
