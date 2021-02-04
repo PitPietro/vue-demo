@@ -1,11 +1,10 @@
 <template>
-  <v-app class="alerts">
-    <h1 class="headline font-weight-bold mb-3">
+  <v-container class="alerts" id="alerts">
+    <h1 class="title">
       Alerts
     </h1>
     <v-row class="text-center">
       <v-col
-          class=" px-4"
           cols="12"
       >
 
@@ -129,7 +128,7 @@
         </v-row>
       </v-col>
     </v-row>
-  </v-app>
+  </v-container>
 </template>
 
 <script>
@@ -148,6 +147,16 @@ export default {
 <style scoped>
 .alerts {
   padding-top: 5%;
-  background-color: #31475e; /* dark green - VueJS logo */
+  background-color: #F9F9F3; /* matte white*/
+  padding-bottom: 0;
+}
+
+.title {
+  padding: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+  background-color: #81C784 !important;
+  /* background-color: #b6b6b6; */
 }
 </style>

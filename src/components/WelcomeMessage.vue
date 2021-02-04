@@ -45,6 +45,6 @@ export default {
 .my-button {
   background-color: royalblue;
   padding: 20px;
-  color: white !important; /* !important sovrascrive uno stile */
+  color: white !important; /* !important override a style */
 }
 </style>
