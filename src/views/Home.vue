@@ -1,39 +1,19 @@
 <template>
   <v-app class="home">
     <div>
-      <Alerts/>
-      <hr />
       <ComputedExample />
       <hr />
       <WatchersTyping />
       <hr />
       <h1 class="my-title"> {{ appTitle }} </h1>
       <WelcomeMessage @emitTitle="handleTitle" />
-      <hr />
-      <PostComponent />
-      <hr />
-      <Carousels />
-      <hr />
-      <ColorPickers />
-      <hr />
-      <Badges />
-      <hr />
-      <TimeLines />
-      <hr />
-      <Lazy />
+
       <hr />
     </div>
   </v-app>
 </template>
 
 <script>
-import Alerts from '@/components/Alerts';
-import Badges from "@/components/Badges";
-import TimeLines from "@/components/TimeLines";
-import Carousels from "@/components/Carousels";
-import Lazy from "@/components/Lazy";
-import ColorPickers from "@/components/ColorPickers";
-import PostComponent from "@/components/PostComponent";
 import WelcomeMessage from "@/components/WelcomeMessage";
 import WatchersTyping from "@/components/WatchersTyping";
 import ComputedExample from "@/components/ComputedExample";
@@ -46,13 +26,6 @@ export default {
     ComputedExample,
     WatchersTyping,
     WelcomeMessage,
-    PostComponent,
-    ColorPickers,
-    Carousels,
-    TimeLines,
-    Alerts,
-    Badges,
-    Lazy
   },
 
   data: () => ({

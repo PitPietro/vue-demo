@@ -1,19 +1,15 @@
 <template>
-  <v-container class="alerts" id="alerts">
+  <v-container id="alerts" class="alerts">
     <h1 class="title">
       Alerts
     </h1>
-    <v-row class="text-center">
-      <v-col
-          cols="12"
-      >
-
-
+    <v-row class="alerts-row">
+      <v-col cols="12" >
         <v-row justify="center">
           <v-alert
               border="top"
-              type="success"
               prominent
+              type="success"
           >
             Alert says: {{ alertType[0] }} <br>
             Border on top
@@ -21,11 +17,11 @@
 
           <v-alert
               border="top"
-              type="success"
+              class="mx-4"
               color="purple"
               dismissible
               prominent
-              class="mx-4"
+              type="success"
           >
             Dismissible (change color)
           </v-alert>
@@ -51,18 +47,18 @@
 
           <v-alert
               border="right"
-              type="info"
+              class="mx-4"
               colored-border
               elevation="5"
-              class="mx-4"
+              type="info"
           >
             Colored border
           </v-alert>
 
           <v-alert
               border="right"
-              type="info"
               dense
+              type="info"
           >
             I'm dense
           </v-alert>
@@ -78,17 +74,17 @@
 
           <v-alert
               border="bottom"
-              type="warning"
-              icon="mdi-vuetify"
               class="mx-4"
+              icon="mdi-vuetify"
+              type="warning"
           >
             {{ alertType[2] }}: I changed icon
           </v-alert>
 
           <v-alert
               border="bottom"
-              type="warning"
               outlined
+              type="warning"
           >
             {{ alertType[2] }}: I'm outlined
           </v-alert>
@@ -104,27 +100,26 @@
           </v-alert>
 
           <v-alert
-              icon="mdi-cloud-alert"
-              text
-              prominent
-              elevation="5"
               border="left"
-              type="error"
               class="mx-4"
+              elevation="5"
+              icon="mdi-cloud-alert"
+              prominent
+              text
+              type="error"
           >
             Alert says: {{ alertType[3] }}
           </v-alert>
 
           <v-alert
-              text
-              outlined
               border="left"
               color="deep-orange"
               icon="mdi-fire"
+              outlined
+              text
           >
             Alert says: {{ alertType[3] }}
           </v-alert>
-
         </v-row>
       </v-col>
     </v-row>
@@ -146,17 +141,18 @@ export default {
 
 <style scoped>
 .alerts {
-  padding-top: 5%;
-  background-color: #F9F9F3; /* matte white*/
-  padding-bottom: 0;
+  /* padding-top: 5%; */
+  background-color: #31475e; /* dark green - VueJS logo */
+}
+
+.alerts-row {
+  margin: 1%;
+  background-color: #F9F9F3; /* matte white */
 }
 
 .title {
   padding: 20px;
   margin-bottom: 50px;
-  text-align: center;
-  color: white;
-  background-color: #81C784 !important;
-  /* background-color: #b6b6b6; */
+  background-color: #3fb984; /* light green - VueJS logo */
 }
 </style>

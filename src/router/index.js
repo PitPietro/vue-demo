@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
-import Alerts from "@/components/Alerts";
+import VuetifyView from "@/views/VuetifyView";
+import JsonPlaceholder from "@/views/JsonPlaceholder";
 
 // docs: https://router.vuejs.org/guide/#javascript
 
@@ -25,12 +26,17 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     },
     {
-        path: '/alerts',
-        name: 'Alerts',
-        component: Alerts,
+        path: '/vuetify',
+        name: 'Vuetify',
+        component: VuetifyView,
         // component: () => import('../components/Alerts.vue')
         // component: Alerts
         // child: { ... }
+    },
+    {
+        path: '/json',
+        name: 'JsonPlaceholder',
+        component: JsonPlaceholder,
     }
 ]
 

@@ -1,21 +1,31 @@
 <template>
   <v-app class="json-class">
     <div class="title">
-      <h1>This is an about page</h1>
+      <h1>JsonPlaceholder</h1>
     </div>
+    <div>
+      <PostComponent />
+      <hr />
+      <Comments />
+    </div>
+
   </v-app>
 </template>
 
 <script>
+import PostComponent from "@/components/GET-from-json/Posts";
+import Comments from "@/components/GET-from-json/Comments";
 export default {
-  name: 'About'
+  name: 'JsonPlaceholder',
+  components: {
+    PostComponent,
+    Comments
+  }
 }
 </script>
 
 <style scoped>
 .json-class {
-  padding-top: 5%;
-  padding-bottom: 20%;
   background-color: #31475e; /* dark green - VueJS logo */
 }
 
