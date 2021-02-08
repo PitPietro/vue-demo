@@ -149,10 +149,4 @@ export default {
   margin: 1%;
   background-color: #F9F9F3; /* matte white */
 }
-
-.title {
-  padding: 20px;
-  margin-bottom: 50px;
-  background-color: #3fb984; /* light green - VueJS logo */
-}
 </style>

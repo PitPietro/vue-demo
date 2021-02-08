@@ -1,0 +1,12 @@
+.component-title {
+    padding: 2%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    background-color: #3fb984; /* light green - VueJS logo */
+}
+
+.view-title {
+    margin: 5%;
+    padding: 5%;
+    background-color: #3fb984; /* light green - VueJS logo */
+}
