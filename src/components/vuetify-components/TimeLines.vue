@@ -1,15 +1,15 @@
 <template>
   <v-container class="mb-10">
-    <h1 class="text-center">{{ titles[0] }}</h1>
-    <h2 class="text-center ml-5 my-10"> 1~ {{ titles[1] }} </h2>
+    <h1 class="component-title">{{ titles[0] }}</h1>
+    <h2 class="component-title ml-5 my-10"> 1~ {{ titles[1] }} </h2>
 
     <v-timeline>
-      <v-timeline-item>1st item</v-timeline-item>
-      <v-timeline-item class="text-right">2nd item</v-timeline-item>
-      <v-timeline-item>3rd item</v-timeline-item>
+      <v-timeline-item class="white-txt-padding"><h3 class="white-txt-padding">1st item</h3></v-timeline-item>
+      <v-timeline-item class="text-right"><h3 class="white-txt-padding">2nd item</h3></v-timeline-item>
+      <v-timeline-item><h3 class="white-txt-padding">3rd item</h3></v-timeline-item>
     </v-timeline>
 
-    <h2 class="text-center ml-5 my-10"> 2~ {{ titles[2] }} </h2>
+    <h2 class="component-title ml-5 my-10"> 2~ {{ titles[2] }} </h2>
 
     <v-card
         class="mx-auto"
@@ -40,7 +40,7 @@
           </v-avatar>
         </v-card-title>
         <v-img
-            src="../assets/timeline-landscape.jpeg"
+            src="../../assets/timeline-landscape.jpeg"
             gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
         >
           <v-container class="fill-height">
@@ -146,7 +146,7 @@
       </v-card-text>
     </v-card>
 
-    <h2 class="text-center ml-5 my-10"> 3~ {{ titles[3] }} </h2>
+    <h2 class="component-title ml-5 my-10"> 3~ {{ titles[3] }} </h2>
 
     <v-card
         class="mx-auto"
@@ -194,7 +194,7 @@
       </v-card-text>
     </v-card>
 
-    <h2 class="text-center ml-5 my-10"> 4~ {{ titles[4] }} </h2>
+    <h2 class="component-title ml-5 my-10"> 4~ {{ titles[4] }} </h2>
 
     <v-timeline
         align-top
@@ -347,5 +347,8 @@ name: "TimeLines",
 </script>
 
 <style scoped>
-
+.white-txt-padding {
+  color: white;
+  padding: 2px;
+}
 </style>

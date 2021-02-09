@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <h1 class="text-center">{{ titles[0] }}</h1>
-    <h2 class="text-center ml-5 my-10"> 1~ {{ titles[1] }} </h2>
+    <h1 class="component-title">{{ titles[0] }}</h1>
+    <h2 class="component-title ml-5 my-10"> 1~ {{ titles[1] }} </h2>
 
     <v-responsive
         class="overflow-y-auto bg-responsive1"

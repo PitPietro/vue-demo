@@ -1,7 +1,7 @@
 <template>
 <v-container class="mb-10">
-  <h1 class="text-center">{{ titles[0] }}</h1>
-  <h2 class="text-center ml-5 my-10"> 1~ {{ titles[1] }} </h2>
+  <h1 class="component-title">{{ titles[0] }}</h1>
+  <h2 class="component-title ml-5 my-10"> 1~ {{ titles[1] }} </h2>
   <v-row justify="center">
       <v-btn
           class="mx-1"
@@ -30,7 +30,8 @@
       </v-icon>
     </v-badge>
   </v-row>
-  <h2 class="text-center ml-5 my-10"> 2~ {{ titles[2] }} </h2>
+
+  <h2 class="component-title ml-5 my-10"> 2~ {{ titles[2] }} </h2>
   <div class="text-center">
     <v-badge
         :value="hover"

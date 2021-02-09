@@ -1,6 +1,6 @@
 <template>
   <v-container id="alerts" class="alerts">
-    <h1 class="title">
+    <h1 class="component-title">
       Alerts
     </h1>
     <v-row class="alerts-row">

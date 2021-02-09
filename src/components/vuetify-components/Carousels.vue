@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <h1 class="title">{{ titles[0] }}</h1>
-    <h2 class="title ml-5 my-10"> 1~ {{ titles[1] }} </h2>
+    <h1 class="component-title">{{ titles[0] }}</h1>
+    <h2 class="component-title ml-5 my-10"> 1~ {{ titles[1] }} </h2>
 
     <v-carousel v-model="defaultModel">
       <v-carousel-item
@@ -26,7 +26,7 @@
       </v-carousel-item>
     </v-carousel>
 
-    <h2 class="title ml-5 my-10"> 2~ {{ titles[2] }} </h2>
+    <h2 class="component-title ml-5 my-10"> 2~ {{ titles[2] }} </h2>
     <v-card
         elevation="24"
         max-width="444"
@@ -65,7 +65,7 @@
       <v-list two-line>
         <v-list-item>
           <v-list-item-avatar>
-            <v-img src="../assets/john-bon-jovi.jpeg"></v-img>
+            <v-img src="../../assets/john-bon-jovi.jpeg"></v-img>
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title>Jon Bon Jovi</v-list-item-title>

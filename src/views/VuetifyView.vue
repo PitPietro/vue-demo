@@ -9,8 +9,6 @@
       <hr />
       <Carousels />
       <hr />
-      <ColorPickers />
-      <hr />
       <Badges />
       <hr />
       <TimeLines />
@@ -22,19 +20,17 @@
 </template>
 
 <script>
-import Alerts from '@/components/Alerts';
-import Badges from "@/components/Badges";
-import TimeLines from "@/components/TimeLines";
-import Carousels from "@/components/Carousels";
-import Lazy from "@/components/Lazy";
-import ColorPickers from "@/components/ColorPickers";
+import Alerts from '@/components/vuetify-components/Alerts';
+import Badges from "@/components/vuetify-components/Badges";
+import TimeLines from "@/components/vuetify-components/TimeLines";
+import Carousels from "@/components/vuetify-components/Carousels";
+import Lazy from "@/components/vuetify-components/Lazy";
 
 export default {
 
   name: 'VuetifyView',
 
   components: {
-    ColorPickers,
     Carousels,
     TimeLines,
     Alerts,
