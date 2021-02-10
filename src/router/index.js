@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import VuetifyView from "@/views/VuetifyView";
 import JsonPlaceholder from "@/views/JsonPlaceholder";
+import MarkdownEditor from "@/views/MarkdownEditor";
 
 // docs: https://router.vuejs.org/guide/#javascript
 
@@ -37,6 +38,11 @@ const routes = [
         path: '/json',
         name: 'JsonPlaceholder',
         component: JsonPlaceholder,
+    },
+    {
+        path: '/md-editor',
+        name: 'MarkdownEditor',
+        component: MarkdownEditor,
     }
 ]
 

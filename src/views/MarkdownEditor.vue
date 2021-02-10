@@ -28,12 +28,12 @@ export default {
 
   computed: {
     compiledMarkdown: function () {
-      return marked(this.input, { sanitize: true});
+      return marked(this.input, {sanitize: true});
     }
   },
 
   methods: {
-    update: _.debounce(function(e) {
+    update: _.debounce(function (e) {
       this.input = e.target.value;
     }, 300)
   }
@@ -54,6 +54,7 @@ textarea,
   vertical-align: top;
   box-sizing: border-box;
   padding: 0 20px;
+  margin-right: 5px;
   background-color: #f6f6f6;
 }
 

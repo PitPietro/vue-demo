@@ -1,9 +1,6 @@
 <template>
-  <div id="app">
-    <v-card
-        class="mx-auto overflow-hidden"
-        height="auto"
-    >
+  <v-app id="app">
+    <div>
       <v-app-bar
           color="deep-purple"
           dark
@@ -19,8 +16,8 @@
           temporary
       >
         <v-list
-            nav
             dense
+            nav
         >
           <v-list-item-group
               v-model="group"
@@ -30,52 +27,71 @@
               <v-list-item-icon>
                 <v-icon>mdi-home</v-icon>
               </v-list-item-icon>
-              <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
+              <v-list-item-title>
+                <router-link to="/">Home</router-link>
+              </v-list-item-title>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
-              <v-list-item-title><router-link to="/vuetify">Vuetify</router-link></v-list-item-title>
+              <v-list-item-title>
+                <router-link to="/vuetify">Vuetify</router-link>
+              </v-list-item-title>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
-              <v-list-item-title><router-link to="/about">About</router-link></v-list-item-title>
+              <v-list-item-title>
+                <router-link to="/about">About</router-link>
+              </v-list-item-title>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
-              <v-list-item-title><router-link to="/json">JsonPlaceholder</router-link></v-list-item-title>
+              <v-list-item-title>
+                <router-link to="/json">JsonPlaceholder</router-link>
+              </v-list-item-title>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
-              <v-list-item-title><router-link to="/md-editor">MarkdownEditor</router-link></v-list-item-title>
+              <v-list-item-title>
+                <router-link to="/md-editor">MarkdownEditor</router-link>
+              </v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>
+                <router-link to="/alerts">Alerts</router-link>
+              </v-list-item-title>
             </v-list-item>
           </v-list-item-group>
         </v-list>
       </v-navigation-drawer>
       <router-view/>
-    </v-card>
+    </div>
 
-  </div>
+  </v-app>
 </template>
 
 <script>
 export default {
   name: 'app',
   data: () => ({
-      drawer: false,
-      group: null,
-    }),
+    drawer: false,
+    group: null,
+  }),
 }
 </script>
 
@@ -84,6 +100,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
+  margin: 0 !important;
 }
 
 #nav {
