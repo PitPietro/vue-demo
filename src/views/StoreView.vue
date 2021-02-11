@@ -1,6 +1,17 @@
 <template>
   <v-app class="store">
     <h1 class="view-title">Store</h1>
+    <h2 class="view-title">Todo Application with Store</h2>
+    <v-container>
+      <v-col>
+        <CompletedTodos />
+        <GetTodo />
+        <CurrentTodos />
+      </v-col>
+    </v-container>
+
+
+    <h2 class="view-title">Increment Store</h2>
     <v-container>
       <v-col>
         <v-badge
@@ -42,17 +53,19 @@
 </template>
 
 <script>
-import {store} from "@/store";
+import CurrentTodos from "@/components/todo-with-store/CurrentTodos";
+import GetTodo from "@/components/todo-with-store/GetTodo";
+import CompletedTodos from "@/components/todo-with-store/CompletedTodos";
 
 // make TodoWriter component
 // make TodoReader component
 
 export default {
   name: "Store",
-
+  components: {CompletedTodos, GetTodo, CurrentTodos},
   computed: {
     count() {
-      return store.state.count
+      return this.$store.state.count
     }
   },
 
@@ -60,10 +73,10 @@ export default {
     increment() {
       // access the state object as 'store.state'
       // trigger a 'state' change with the 'store.commit'
-      store.commit('increment')
+      this.$store.commit('increment')
     },
     decrement() {
-      store.commit('decrement')
+      this.$store.commit('decrement')
     }
   }
 }
