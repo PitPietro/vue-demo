@@ -1,20 +1,30 @@
 <template>
   <v-app class="json-class">
-    <div class="title">
-      <h1>JsonPlaceholder</h1>
-    </div>
+    <h1 class="view-title">JsonPlaceholder</h1>
+    <v-container>
+      <v-row>
+        <v-col>
+          <PostComponent/>
+        </v-col>
+        <v-col>
+          <Comments/>
+        </v-col>
+      </v-row>
+    </v-container>
+    <!--
     <div>
-      <PostComponent />
-      <hr />
-      <Comments />
+      <PostComponent/>
+      <hr/>
+      <Comments/>
     </div>
-
+    -->
   </v-app>
 </template>
 
 <script>
 import PostComponent from "@/components/GET-from-json/Posts";
 import Comments from "@/components/GET-from-json/Comments";
+
 export default {
   name: 'JsonPlaceholder',
   components: {

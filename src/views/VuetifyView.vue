@@ -1,20 +1,18 @@
 <template>
   <v-app class="vuetify-view">
-    <div class="title">
-      <h1>Vuetify Components</h1>
-    </div>
+    <h1 class="view-title">Vuetify Components</h1>
     <div>
       <Alerts/>
-      <hr />
-      <hr />
-      <Carousels />
-      <hr />
-      <Badges />
-      <hr />
-      <TimeLines />
-      <hr />
-      <Lazy />
-      <hr />
+      <hr/>
+      <hr/>
+      <Carousels/>
+      <hr/>
+      <Badges/>
+      <hr/>
+      <TimeLines/>
+      <hr/>
+      <Lazy/>
+      <hr/>
     </div>
   </v-app>
 </template>
@@ -43,13 +41,7 @@ export default {
 <style scoped>
 .vuetify-view {
   /* adding-top: 1%; */
-  padding-bottom: 20%;
+  /* padding-bottom: 20%; */
   background-color: #31475e; /* dark green - VueJS logo */
-}
-
-.title {
-  margin: 4%;
-  padding: 4%;
-  background-color: #3fb984; /* light green - VueJS logo */
 }
 </style>

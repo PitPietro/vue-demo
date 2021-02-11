@@ -1,11 +1,11 @@
 <template>
-  <v-container class="comments">
+  <v-container class="matte-white-bg">
     <h1>List of posts</h1>
     <div v-for="(person, key) in people" :key="key">
       <!-- if you do not want to show all the elements, add a 'v-if' condition -->
-      <div v-if="key < 10" class="comment">
+      <div v-if="key < $route.params.id" class="json-element">
         <h2>{{ person.title }}</h2>
-        <h3>ID n°{{ person.id }}</h3>
+        <h3 class="h3-right">ID n°{{ person.id }}</h3>
         <code> {{ person.body }} </code>
       </div>
     </div>
@@ -59,21 +59,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-h3 {
-  text-align: right;
-}
-
-code {
-  text-align: justify;
-  letter-spacing: 5px
-}
-.comments {
-  background-color: #F9F9F3; /* matte white */
-}
-.comment {
-  margin-bottom: 2%;
-  padding: 5%;
-}
-</style>

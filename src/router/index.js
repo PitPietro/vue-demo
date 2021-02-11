@@ -4,6 +4,8 @@ import Home from '@/views/Home.vue'
 import VuetifyView from "@/views/VuetifyView";
 import JsonPlaceholder from "@/views/JsonPlaceholder";
 import MarkdownEditor from "@/views/MarkdownEditor";
+import GitHubCommits from "@/views/GitHubCommits";
+import Store from "@/views/StoreView";
 
 // docs: https://router.vuejs.org/guide/#javascript
 
@@ -35,7 +37,7 @@ const routes = [
         // child: { ... }
     },
     {
-        path: '/json',
+        path: '/json/:id',
         name: 'JsonPlaceholder',
         component: JsonPlaceholder,
     },
@@ -43,6 +45,16 @@ const routes = [
         path: '/md-editor',
         name: 'MarkdownEditor',
         component: MarkdownEditor,
+    },
+    {
+        path: '/github',
+        name: 'GitHubCommits',
+        component: GitHubCommits,
+    },
+    {
+        path: '/store',
+        name: 'Store',
+        component: Store,
     }
 ]
 

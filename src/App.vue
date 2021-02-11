@@ -24,7 +24,6 @@
               active-class="deep-purple--text text--accent-4"
           >
 
-
             <v-list-item v-for="(link, key) in links" :key="key">
               <v-list-item-icon>
                 <v-icon>{{ link.icon }}</v-icon>
@@ -45,6 +44,9 @@
 </template>
 
 <script>
+
+// icons: https://materialdesignicons.com/
+// add 'mdi-' to the icon name
 export default {
   name: 'app',
   data: () => ({
@@ -58,24 +60,34 @@ export default {
         title: 'Home'
       },
       {
-        icon: '',
+        icon: 'mdi-vuetify',
         toLink: '/vuetify',
         title: 'Vuetify'
       },
       {
-        icon: '',
-        toLink: '/about',
-        title: 'About'
-      },
-      {
-        icon: '',
-        toLink: '/json',
+        icon: 'mdi-code-json',
+        toLink: '/json/1',
         title: 'JsonPlaceholder'
       },
       {
-        icon: 'mdi-account',
+        icon: 'mdi-language-markdown',
         toLink: '/md-editor',
         title: 'MarkdownEditor'
+      },
+      {
+        icon: 'mdi-github',
+        toLink: '/github',
+        title: 'GitHub Commits'
+      },
+      {
+        icon: 'mdi-store',
+        toLink: '/store',
+        title: 'Store'
+      },
+      {
+        icon: 'mdi-account',
+        toLink: '/about',
+        title: 'About'
       },
       /*
       * {

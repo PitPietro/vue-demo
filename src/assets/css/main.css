@@ -1,3 +1,8 @@
+code {
+    text-align: justify;
+    letter-spacing: 5px
+}
+
 .component-title {
     padding: 2%;
     margin-top: 4%;
@@ -9,4 +14,21 @@
     margin: 5%;
     padding: 5%;
     background-color: #3fb984; /* light green - VueJS logo */
+}
+
+.matte-white-bg {
+    background-color: #F9F9F3; /* matte white */
+}
+
+.dark-green-bg {
+    background-color: #31475e; /* dark green - VueJS logo */
+}
+
+.json-element {
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.h3-right {
+    text-align: right;
 }

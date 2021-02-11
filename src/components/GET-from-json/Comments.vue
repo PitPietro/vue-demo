@@ -1,11 +1,11 @@
 <template>
-  <v-container class="comments">
+  <v-container class="matte-white-bg">
     <h1>List of comments</h1>
     <div v-for="(comment, key) in comments" :key="key">
       <!-- if you do not want to show all the elements, add a 'v-if' condition -->
-      <div v-if="key > 200 && key < 250" class="comment">
+      <div v-if="key < $route.params.id" class="json-element">
         <h2>{{ comment.name }}</h2>
-        <h3>ID n°{{ comment.id }}</h3>
+        <h3 class="h3-right">ID n°{{ comment.id }}</h3>
         <p>send me an email at <a>{{ comment.email }}</a></p>
         <code> {{ comment.body }} </code>
       </div>
@@ -60,22 +60,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-h3 {
-  text-align: right;
-}
-
-code {
-  text-align: justify;
-  letter-spacing: 5px
-}
-.comments {
-  margin-top: 10%;
-  background-color: #F9F9F3; /* matte white */
-}
-.comment {
-  margin-bottom: 2%;
-  padding: 5%;
-}
-</style>
