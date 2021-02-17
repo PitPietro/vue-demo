@@ -25,6 +25,15 @@ export const store = new Vuex.Store({
         removeTodo(state, index) {
             // splice(index, numberOfElementsToRemove, ...)
             state.todos.splice(index, 1)
+        },
+        removeLastTodo(state) {
+            state.todos.pop()
+        },
+        removeFirstTodo(state) {
+            state.todos.splice(0, 1)
+        },
+        removeAllTodos(state) {
+            state.todos = []
         }
     },
 
