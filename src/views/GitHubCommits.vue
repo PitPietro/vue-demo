@@ -43,8 +43,7 @@
 <script>
 // Docs: https://vuejs.org/v2/examples/commits.html
 
-const apiURL =
-    "https://api.github.com/repos/vuejs/vue/commits?per_page=3&sha=";
+const apiURL = "https://api.github.com/repos/vuejs/vue/commits?per_page=3&sha=";
 
 export default {
   name: "GitHubCommits",
@@ -71,7 +70,7 @@ export default {
       return newline > 0 ? v.slice(0, newline) : v;
     },
     formatDate: function (v) {
-      return v.replace(/T|Z/g, " ");
+      return v.replace(/[TZ]/g, " ");
     },
     fetchData: function () {
       const xhr = new XMLHttpRequest();
@@ -79,7 +78,6 @@ export default {
       xhr.open("GET", apiURL + self.currentBranch);
       xhr.onload = function () {
         self.commits = JSON.parse(xhr.responseText);
-        console.log(self.commits[0].html_url);
       };
       xhr.send();
     }
