@@ -22,15 +22,15 @@ export const store = new Vuex.Store({
         addTodo(state, todo) {
             state.todos.push(todo);
         },
+        removeTodo(state, index) {
+            // splice(index, numberOfElementsToRemove, ...)
+            state.todos.splice(index, 1)
+        }
     },
 
     getters: {
-        newTodo: state => state.newTodo,
+        // newTodo: state => state.newTodo,
         todos: state => state.todos,
-
-        completedTodos: state => state.todos.filter((todo) => {
-            return todo.completed
-        }),
     }
 });
 

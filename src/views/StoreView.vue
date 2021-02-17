@@ -4,9 +4,7 @@
     <h2 class="view-title">Todo Application with Store</h2>
     <v-container>
       <v-col>
-        <CompletedTodos />
-        <GetTodo />
-        <CurrentTodos />
+        <GetTodo/>
       </v-col>
     </v-container>
 
@@ -53,16 +51,14 @@
 </template>
 
 <script>
-import CurrentTodos from "@/components/todo-with-store/CurrentTodos";
 import GetTodo from "@/components/todo-with-store/GetTodo";
-import CompletedTodos from "@/components/todo-with-store/CompletedTodos";
 
 // make TodoWriter component
 // make TodoReader component
 
 export default {
   name: "Store",
-  components: {CompletedTodos, GetTodo, CurrentTodos},
+  components: {GetTodo},
   computed: {
     count() {
       return this.$store.state.count
