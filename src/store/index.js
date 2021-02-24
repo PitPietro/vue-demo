@@ -1,45 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import {todoStore} from "@/store/todoStore";
+import {counterStore} from "@/store/counterStore";
 
 Vue.use(Vuex)
 
+// TODO make different modules
+
 export const store = new Vuex.Store({
-    state: {
-        count: 0,
-        // list of all todos
-        todos: [],
-        // body of the new item
-        newTodo: ''
-    },
-
-    mutations: {
-        increment: state => state.count++,
-        decrement: state => state.count--,
-
-        getTodo(state, todo) {
-            state.newTodo.push(todo)
-        },
-        addTodo(state, todo) {
-            state.todos.push(todo);
-        },
-        removeTodo(state, index) {
-            // splice(index, numberOfElementsToRemove, ...)
-            state.todos.splice(index, 1)
-        },
-        removeLastTodo(state) {
-            state.todos.pop()
-        },
-        removeFirstTodo(state) {
-            state.todos.splice(0, 1)
-        },
-        removeAllTodos(state) {
-            state.todos = []
-        }
-    },
-
-    getters: {
-        // newTodo: state => state.newTodo,
-        todos: state => state.todos,
+    modules: {
+        counter: counterStore,
+        todo: todoStore
     }
 });
 

@@ -69,10 +69,10 @@ export default {
     increment() {
       // access the state object as 'store.state'
       // trigger a 'state' change with the 'store.commit'
-      this.$store.commit('increment')
+      this.$store.commit('counter/increment')
     },
     decrement() {
-      this.$store.commit('decrement')
+      this.$store.commit('counter/decrement')
     }
   }
 }
